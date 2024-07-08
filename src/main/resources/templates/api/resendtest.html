@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        
+        <link href="css/style.css" rel="stylesheet" />
+
+        <title>클린북스</title>
+    </head>
+    <body>
+       heyyyyyyyyyyyyyyyyyyyyyyyyyyyy
+       <th:block th:each="file :${files}">
+            <a th:text="${file}"></a>
+
+       </th:block>
+    </body>
+
+</html>

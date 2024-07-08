@@ -1,0 +1,89 @@
+.background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+.background img{
+    width: auto;
+    height: auto;
+
+}
+.background::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.9)), to(rgba(0, 0, 0, 0.7)));
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7));
+
+}
+
+.intro{
+    font-size: 40px;
+    padding: 50px;
+}
+
+.upper_area{
+    width: 100vw;
+    height: 50vh;
+    line-height: 50vh;
+    position: relative;
+    text-align: center;
+}
+
+.choose_area{
+    width: 50vw;
+    height: auto;
+    padding: 20px;
+}
+.choose_area .choose_box{
+    width: auto;
+}
+
+.template_area{
+    position: relative;
+    min-width: 400px;
+    width: auto;
+    max-width: 100vw;
+    height: auto;
+    background-color: antiquewhite;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap; /* flex가 기본이 되나, item이 최대 width를 넘어서면 다음줄로 이동. */
+    padding: 10px;
+}
+.template_box{
+    position: relative;
+    width: 400px;
+    height: 300px;
+    background-color: white;
+    margin: 10px;
+    overflow: hidden;/* 이미지가 상자를 넘지 않음. */
+}
+.template_box img {
+    width: 320px;
+    height: 180px;
+    /*object-fit: cover // 이미지가 박스를 가득 채우도록 설정. */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 1s ease;
+}
+.template_box:hover .image0{
+    transform: translate(-63%, -83%);
+}
+.template_box:hover .image2{
+    transform: translate(-37%, -17%);
+}
+
+
+.test{
+    font-size: 100px;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        
+        <link href="css/public/top.css" rel="stylesheet" />
+        <link href="css/index.css" rel="stylesheet" />
+
+        <title>AutoPPT</title>
+    </head>
+    <body>
+        <div class="background">
+            <img src="img/background.jpg">
+        </div>
+        <div class="main_tab">
+            <div class="content">
+                <div class="head_area">
+                    <div class="box">
+                        <b class="title" id="title">오토PPT</b>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="upper_area">
+                    <div class="intro">멋진 파워포인트를 자동으로 생성해보세요!</div>
+                </div>
+            </div>
+            <div class="content">
+                <div id="template_area" class="template_area">
+                    
+                </div>
+            </div>
+            <div class="content">
+                <div class="choose_area">
+                    <div class="choose_box">
+                        <form action="/ppttype">
+                            <p>주제를 적어주세요</p>
+                            <input type="text" name="subject" id="subject" placeholder="주제 선정">
+                            <p>분위기를 어떻게 하시고 싶으신가요?</p>
+                            <input type="radio" name="vibe" id="vibe" value="bright" checked> 밝게 <br>
+                            <input type="radio" name="vibe" id="vibe" value="dark"> 어둡게 <br>
+                            <p>배경 이미지는 어떤게 좋으신가요?</p>
+                            <input type="radio" name="detail" id="detail" value="simple" checked> 심플하게 <br>
+                            <input type="radio" name="detail" id="detail" value="colorful"> 화려하게 <br>
+                            <button type="submit">생성</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <a>
+                <form action="/reqbook" method="post">
+                    <input type="text" name="bookname">
+                    <button type="submit">데이터베이스 추가</button>
+                </form>
+                </a>
+                <button onclick="location.href = '/remove'">삭제</button>
+                <p>
+                <input type="text" id="search" placeholder="this" onkeyup="printName()">
+                </p>
+                <button>ppt생성</button>
+            <div id="result">
+
+            </div>
+                
+            </div>
+            <div class="content">
+                <div class="test">
+                    <th:block th:each="name :${names}">
+                        <p th:text="${name}"></p>
+                    </th:block>
+                </div>
+            </div>
+        </div>
+        <script src="js/index.js"></script>
+        <script src="js/backgroundContent.js"></script>
+    </body>
+
+</html>
