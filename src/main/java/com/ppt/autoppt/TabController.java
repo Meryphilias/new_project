@@ -74,9 +74,17 @@ public class TabController {
     }
 
     @GetMapping("/ppttype")
-    public String ppttype(Model model) {
+    public String ppttype(@RequestParam(name = "b", required = false, defaultValue = "default") String b, Model model) {
+        if("content1".equals(b)){
+            model.addAttribute("imageurl", "0");
 
-        List<imageurlEntity> imageurlList = ;
+        }
+        else if("content2".equals(b)){
+            model.addAttribute("imageurl", "1");
+
+        }
+
+        //List<imageurlEntity> imageurlList = ;
         return "api/template.html";
     }
     

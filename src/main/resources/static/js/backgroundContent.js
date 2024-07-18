@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function(){
             box.id = 'content'+ (i + 1);
             box.textContent = box.id;
             box.addEventListener('click', function(){   
-                window.location.href = `/ppttype/${box.id}`;
+                window.location.href = `/ppttype?b=${box.id}`;
 
             });
             for(let j = 0; j < imageUrl[i].length; j++){
