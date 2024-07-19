@@ -1,6 +1,8 @@
 body {
 	margin: 0;
     padding: 0;
+    user-select: none; /* 텍스트 선택 비활성화 */
+    outline: none;
 }
 .main_tab{
     min-height: 100vh;
@@ -24,27 +26,19 @@ body {
     position: relative;
 }
 .head_area{
-    height: 8vh;
+    height: 65px;
     width: 100%;
-    background: #FE9A2E;
+    background: #FAFAFA;
     display: flex;
     position: relative;
     z-index: 4;
+    color: #1C1C1C;
 
 }
-.head_area .box{
-    width: 100%;
-    height: 8vh;
-    position: relative;
-    z-index: 4;
-    border-bottom: 3px solid;
-    display: flex;
-}
-
-.head_area .box .title{
+.head_area .title{
     width: auto;
-    height: 8vh;
-    line-height: 8vh;
+    height: 65px;
+    line-height: 65px;
     position: relative;
     letter-spacing: 0px;/*글자 사이의 간격*/
     padding: 0px 30px;
@@ -52,6 +46,16 @@ body {
     text-align: center;
     cursor: pointer;
 
+}
+.head_area .explanation{
+    width: auto;
+    height: 65px;
+    line-height: 65px;
+}
+.head_area .help{
+    width: auto;
+    height: 65px;
+    line-height: 65px;
 }
 .head_area .second_box{
     min-width: auto;
@@ -61,11 +65,27 @@ body {
 }
 .head_area .second_box .item{
     width: auto;
-    height: 8vh;
-    line-height: 8vh;
+    height: 65px;
+    line-height: 65px;
     text-align: center;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 18px;
     padding: 0 20px;
     float:right;
+}
+.border_area{
+    width: 100%;
+    height: 30px;
+    background-color: #424242;
+    display: inline-block;
+    
+}
+.border_area .license{
+    padding: 0px 20px;
+    color: #D8D8D8;
+    font-size: 15px;
+    cursor: pointer;
+    line-height: 30px;
+    text-align: center;
+    float: right;
 }
