@@ -38,18 +38,34 @@ body {
     position: relative;
     z-index: 4;
     border-bottom: 3px solid;
-
+    display: flex;
 }
 
 .head_area .box .title{
     width: auto;
     height: 8vh;
     line-height: 8vh;
-    position: absolute;
-    letter-spacing: 0px;
+    position: relative;
+    letter-spacing: 0px;/*글자 사이의 간격*/
     padding: 0px 30px;
     font-size: 30px;
     text-align: center;
     cursor: pointer;
 
+}
+.head_area .second_box{
+    min-width: auto;
+    display: inline-block;
+    flex-grow: 1;
+
+}
+.head_area .second_box .item{
+    width: auto;
+    height: 8vh;
+    line-height: 8vh;
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 0 20px;
+    float:right;
 }
