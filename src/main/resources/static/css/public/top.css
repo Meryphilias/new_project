@@ -60,10 +60,9 @@ body {
 .head_area .second_box{
     min-width: auto;
     display: inline-block;
-    flex-grow: 1;
-
+    flex-grow: 1;   
 }
-.head_area .second_box .item{
+.head_area .second_box *{
     width: auto;
     height: 65px;
     line-height: 65px;
@@ -71,7 +70,11 @@ body {
     cursor: pointer;
     font-size: 18px;
     padding: 0 20px;
+    transition: color 0.2s;
     float:right;
+}
+.head_area .second_box *:hover{
+    color: orange;
 }
 .border_area{
     width: 100%;
@@ -80,12 +83,16 @@ body {
     display: inline-block;
     
 }
-.border_area .license{
+.border_area .license *{
     padding: 0px 20px;
     color: #D8D8D8;
     font-size: 15px;
     cursor: pointer;
     line-height: 30px;
     text-align: center;
+    transition: color 0.2s;
     float: right;
+}
+.border_area .license *:hover{
+    color: skyblue;
 }
